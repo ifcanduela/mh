@@ -1,23 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	ssr: false,
+	app: {
+		baseURL: "/mh/",
+	},
 	devtools: { enabled: false },
 	devServer: {
 		port: 3020,
 	},
-	modules: [
-		"@nuxt/image",
-		"@nuxtjs/color-mode",
-		"@nuxtjs/google-fonts",
-		"@nuxtjs/tailwindcss",
-		"@pinia/nuxt",
-		"@vueuse/nuxt",
-		"nuxt-icon",
-		"@nuxt/content",
-	],
-	colorMode: {
-		classSuffix: "",
-	},
+	modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@vueuse/nuxt"],
 	googleFonts: {
 		display: "swap",
 		download: true,
@@ -25,5 +16,4 @@ export default defineNuxtConfig({
 			Inter: [400, 700],
 		},
 	},
-	image: {},
 })
