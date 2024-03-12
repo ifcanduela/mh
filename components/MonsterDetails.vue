@@ -1,9 +1,16 @@
 <template>
 	<div class="fixed inset-0 bg-white/90 p-3 backdrop-blur-sm overflow-y-auto">
-		<h2>{{ monster.name }}</h2>
+		<button
+			class="absolute px-3 p-1 top-2 right-2 bg-gray-50 hover:bg-red-200"
+			@click="handleCloseClick"
+		>
+			&times; close
+		</button>
+		<h2 class="text-lg font-bold">
+			{{ monster.name }} <CampaignBadge :campaign="monster.campaign" />
+		</h2>
 
-		<div class="flex justify-between items-center">
-			<CampaignBadge :campaign="monster.campaign" />
+		<div class="flex justify-start items-center gap-3">
 			<MainElementalWeakness
 				:weaknesses="monster.elementalWeaknesses.total"
 			/>
@@ -68,6 +75,8 @@
 		monster: Monster
 	}>()
 
+	const emit = defineEmits(["close"])
+
 	const methods = [
 		{ key: "questReward", label: "Hunt" },
 		{ key: "captureReward", label: "Capture" },
@@ -75,4 +84,8 @@
 		{ key: "carve", label: "Carving" },
 		{ key: "drop", label: "Item drop" },
 	]
+
+	function handleCloseClick() {
+		emit("close")
+	}
 </script>

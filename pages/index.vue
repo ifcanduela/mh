@@ -1,6 +1,15 @@
 <template>
 	<div class="flex flex-col gap-4 max-w-4xl w-full mx-auto">
-		<h1 class="text-3xl font-bold text-orange-800">Monsters</h1>
+		<div class="text-center flex flex-col gap-1 justify-center">
+			<h1 class="text-3xl font-bold text-orange-900/75">
+				Monster Hunter Rise
+			</h1>
+			<div
+				class="text-sm font-bold uppercase tracking-wide text-black/75"
+			>
+				Hunting Companion
+			</div>
+		</div>
 
 		<menu class="flex gap-4">
 			<input
