@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
 	ssr: false,
 	devtools: { enabled: false },
+	app: {
+		baseURL: "/mh/",
+	},
 	devServer: {
 		port: 3020,
 	},
