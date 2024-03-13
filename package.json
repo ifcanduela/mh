@@ -3,9 +3,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "nuxt build",
+		"build": "nuxt build --dotenv=.github/.env",
 		"dev": "nuxt dev",
-		"generate": "nuxt generate",
+		"generate": "nuxt generate --dotenv=.github/.env",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"cli": "tsx cli.ts"

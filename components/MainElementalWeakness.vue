@@ -1,28 +1,15 @@
 <template>
-	<span
-		class="text-xs uppercase font-bold tracking-wide flex items-center gap-1 p-2"
-		:class="[bgClass]"
-	>
+	<Element :element="weakness">
 		<img class="w-6 h-6" :src="ElementIcons[weakness]" />
-		{{ weakness }}</span
-	>
+		<span class="hidden sm:inline-block">
+			{{ weakness }}
+		</span>
+	</Element>
 </template>
 
 <script setup lang="ts">
 	import { ElementalWeakness } from "~/utils/types"
-	import fireIcon from "~/assets/images/fire.png"
-	import waterIcon from "~/assets/images/water.png"
-	import iceIcon from "~/assets/images/ice.png"
-	import thunderIcon from "~/assets/images/thunder.png"
-	import dragonIcon from "~/assets/images/dragon.png"
-
-	const ElementIcons = {
-		fire: fireIcon,
-		water: waterIcon,
-		ice: iceIcon,
-		thunder: thunderIcon,
-		dragon: dragonIcon,
-	}
+	import ElementIcons from "~/utils/ElementIcons"
 
 	const props = defineProps<{
 		weaknesses: ElementalWeakness

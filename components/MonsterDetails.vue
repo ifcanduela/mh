@@ -6,12 +6,13 @@
 		>
 			&times; close
 		</button>
+
 		<h2 class="text-lg font-bold">
 			{{ monster.name }} <CampaignBadge :campaign="monster.campaign" />
 		</h2>
 
 		<div class="flex justify-start items-center gap-3">
-			<MainElementalWeakness
+			<ElementalWeaknesses
 				:weaknesses="monster.elementalWeaknesses.total"
 			/>
 		</div>
@@ -46,12 +47,16 @@
 										{{ method.label }}
 									</td>
 									<td class="p-2">
-										{{ material.chance }}%
+										<span>{{ material.chance }}%</span>
 										<span v-if="material.count > 1"
-											>x {{ material.count }}</span
+											>&nbsp;&times;{{
+												material.count
+											}}</span
 										>
 										<span v-if="material.part"
-											>&mdash; {{ material.part }}</span
+											>&nbsp;&mdash;&nbsp;{{
+												material.part
+											}}</span
 										>
 									</td>
 								</tr>
@@ -60,10 +65,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div>
-				<h2>Elemental Weaknesses</h2>
-				<div></div>
-			</div> -->
 		</div>
 	</div>
 </template>

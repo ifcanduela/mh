@@ -5,6 +5,11 @@ export default defineNuxtConfig({
 	app: {
 		baseURL: "/mh/",
 	},
+	$development: {
+		app: {
+			baseURL: "/",
+		},
+	},
 	devServer: {
 		port: 3020,
 	},
