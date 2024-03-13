@@ -13,25 +13,15 @@
 <script setup lang="ts">
 	import { ElementalWeakness } from "~/utils/types"
 	import ElementIcons from "~/utils/ElementIcons"
+	import { getSortedWeaknesses } from "~/utils/helpers"
 
 	const props = defineProps<{
 		weaknesses: ElementalWeakness
 	}>()
 
 	const items = computed(() => {
-		const weaknesses = ["fire", "water", "thunder", "ice", "dragon"].map(
-			(element) => {
-				return {
-					label: element,
-					value: props.weaknesses[element],
-				}
-			},
-		)
+		const weaknesses = getSortedWeaknesses(props.weaknesses)
 
-		weaknesses.sort((a, b) => b.value - a.value)
-
-		const max = weaknesses[0].value
-
-		return weaknesses.filter((w) => w.value >= max - 15)
+		return weaknesses /* .filter((w) => w.value >= max - 15) */
 	})
 </script>

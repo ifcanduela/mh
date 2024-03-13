@@ -1,5 +1,7 @@
 <template>
-	<div class="fixed inset-0 bg-white/90 p-3 backdrop-blur-sm overflow-y-auto">
+	<div
+		class="fixed inset-0 bg-white/90 p-3 backdrop-blur-sm overflow-y-auto p-4"
+	>
 		<button
 			class="absolute px-3 p-1 top-2 right-2 bg-gray-50 hover:bg-red-200"
 			@click="handleCloseClick"
@@ -7,8 +9,9 @@
 			&times; close
 		</button>
 
-		<h2 class="text-lg font-bold">
-			{{ monster.name }} <CampaignBadge :campaign="monster.campaign" />
+		<h2 class="flex items-center gap-4 mb-4">
+			<span class="font-bold text-xl">{{ monster.name }}</span>
+			<CampaignBadge expand :campaign="monster.campaign" />
 		</h2>
 
 		<div class="flex justify-start items-center gap-3">
@@ -17,11 +20,28 @@
 			/>
 		</div>
 
-		<div class="flex gap-4 justify-center">
+		<div class="flex flex-col gap-4 justify-center">
+			<menu class="my-4 relative">
+				<input
+					type="text"
+					placeholder="Filter by material"
+					v-model="materialFilter"
+					class="grow border border-gray-200 rounded p-2 w-full"
+				/>
+				<button
+					v-show="materialFilter.length"
+					@click="materialFilter = ''"
+					class="absolute right-0 h-full bg-orange-200 rounded aspect-square text-xs"
+				>
+					&times;
+				</button>
+			</menu>
+
 			<div>
-				<h2>Materials</h2>
-				<div class="grid grid-cols-2 gap-4">
-					<div v-for="monsterMaterial in monster.materials">
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+				>
+					<div v-for="monsterMaterial in filteredMaterials">
 						<h3 class="font-bold text-orange-950">
 							{{ monsterMaterial.name }}
 						</h3>
@@ -86,7 +106,21 @@
 		{ key: "drop", label: "Item drop" },
 	]
 
+	const materialFilter = ref("")
+
 	function handleCloseClick() {
 		emit("close")
 	}
+
+	const filteredMaterials = computed(() => {
+		let result = props.monster.materials.slice()
+
+		if (materialFilter.value) {
+			const rx = new RegExp(materialFilter.value, "i")
+
+			result = result.filter((m) => rx.test(m.name))
+		}
+
+		return result
+	})
 </script>

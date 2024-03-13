@@ -1,8 +1,8 @@
 <template>
-	<Element :element="weakness">
-		<img class="w-6 h-6" :src="ElementIcons[weakness]" />
+	<Element :element="weakness.label">
+		<img class="w-6 h-6" :src="ElementIcons[weakness.label]" />
 		<span class="hidden sm:inline-block">
-			{{ weakness }}
+			{{ weakness.label }}
 		</span>
 	</Element>
 </template>
@@ -15,20 +15,10 @@
 		weaknesses: ElementalWeakness
 	}>()
 
-	const elements = ["fire", "water", "thunder", "ice", "dragon"]
-
 	const weakness = computed(() => {
-		let maxLabel = ""
-		let maxValue = 0
+		const sorted = getSortedWeaknesses(props.weaknesses)
 
-		for (let w of elements) {
-			if (props.weaknesses[w] > maxValue) {
-				maxLabel = w
-				maxValue = props.weaknesses[w]
-			}
-		}
-
-		return maxLabel
+		return sorted[0]
 	})
 
 	const bgClass = computed(() => {
@@ -40,6 +30,6 @@
 			dragon: "bg-purple-100",
 		}
 
-		return classes[weakness.value]
+		return classes[weakness.value.label]
 	})
 </script>

@@ -11,13 +11,20 @@
 			</div>
 		</div>
 
-		<menu class="flex gap-4">
+		<menu class="flex gap-4 relative">
 			<input
 				type="text"
 				placeholder="Filter by name or material"
 				v-model="filter"
 				class="grow border border-gray-200 rounded p-2 w-full"
 			/>
+			<button
+				v-show="filter.length"
+				@click="filter = ''"
+				class="absolute right-0 h-full bg-orange-200 rounded aspect-square text-xs"
+			>
+				&times;
+			</button>
 		</menu>
 
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -63,7 +70,11 @@
 		if (filter.value.length) {
 			const rx = new RegExp(filter.value, "i")
 
-			result = result.filter((m) => rx.test(m.name))
+			result = result.filter((m) => {
+				let str =
+					m.name + " " + m.materials.map((m) => m.name).join(" ")
+				return rx.test(str)
+			})
 		}
 
 		result.sort((a, b) => a.name.localeCompare(b.name))
