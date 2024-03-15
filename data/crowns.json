@@ -1,0 +1,782 @@
+[
+	{
+		"monster": "Great Izuchi",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "The Swirling Gale",
+			"masterRank": "Reap What You Saw",
+			"guaranteed": "Rookie Hunters Welcome (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Great Baggi",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Learning the Light Bowgun",
+			"masterRank": "BRRRR Plus ZZZzzz Equals?",
+			"guaranteed": "Rookie Hunters Welcome (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Kulu-Ya-Ku",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Divine Comedy",
+			"masterRank": "Need a Hunter, ASAP!",
+			"guaranteed": "Harvest Boon (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Great Wroggi",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Learning the Light Bowgun",
+			"masterRank": null,
+			"guaranteed": "(REDACTED) (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Arzuros",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Blue, Round, and Cute",
+			"masterRank": null,
+			"guaranteed": "Catnap Ruined (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Lagombi",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Even Cute Things Have Fangs",
+			"masterRank": "The Good, the Bad, and Lagombi",
+			"guaranteed": "The Tiniest Snowbaron (Mini) (HR) (Event); Harvest Boon (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Volvidon",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Hone Your Heavy Bowgun",
+			"masterRank": "The Red Rolling Terror",
+			"guaranteed": "Rookie Hunters Welcome (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Aknosom",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Dastardly Vile Aknosom Trio (Both) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Royal Ludroth",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Foul Play in the Forest",
+			"masterRank": "You Had Me at Poofy",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Barroth",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Rise Above the Mud",
+			"masterRank": "Barroth to a Great Start",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Daimyo Hermitaur",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Supply Line Shell Game (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Khezu",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Night of the Khezu",
+			"masterRank": null,
+			"guaranteed": "In Pursuit of the Khezuit (Large) (MR)"
+		}
+	},
+	{
+		"monster": "Tetranadon",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "The Frost Islands Arena",
+			"masterRank": "Tetranadon Blockade",
+			"guaranteed": "Wrestling with Pain (Large) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Bishaten",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Nothing to Sneeze At! (Both) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Blood Orange Bishaten",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Pinecone Pelting Panic (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Pukei-Pukei",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Go Away, Pukei!",
+			"masterRank": "Poison Drops in the Sand",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Jyuratodus",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "The Restless Swamp",
+			"masterRank": "A Shocking, Sloppy Synthesis",
+			"guaranteed": "A Fire to Jyuratodouse (Both) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Basarios",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Miner Problem",
+			"masterRank": "Pent-Up Frustrations",
+			"guaranteed": "Basarios Buzzkill (Large) (MR)"
+		}
+	},
+	{
+		"monster": "Somnacanth",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "A Somniferous Elegy",
+			"masterRank": "Somnacanth Sleep Aid",
+			"guaranteed": "Premarital Socks (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Aurora Somnacanth",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Keep it Busy",
+			"guaranteed": "Premarital Socks (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Rathian",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Charmed by a Queen",
+			"masterRank": "The Queen's Garden",
+			"guaranteed": "Forbidden Waltz (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Gold Rathian",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "A Single Beam of Moonlight",
+			"guaranteed": "Knights, Show Thy Valiance! (Mini) (MR) (Event); Rare Species Snapshot (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Barioth",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Sharpening Amber Fangs",
+			"masterRank": "White Knight vs. New Knight",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Tobi-Kadachi",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Skies are Gray",
+			"masterRank": "Rumble in the Jungle",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Magnamalo",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Clad in Hellfire",
+			"masterRank": "Purging Hatred",
+			"guaranteed": "Blazin' Soul of a Warrior (Large) (HR) (Event); Flagship Fight (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Scorned Magnamalo",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Back with a Vengeance",
+			"guaranteed": "Dual Threat: Animose Crossing (Both) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Anjanath",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Closer Than it Appears",
+			"masterRank": "Provoking an Anjanath's Wrath",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Nargacuga",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "The Abyss Stares Back",
+			"masterRank": null,
+			"guaranteed": "Shady Activity (Large) (MR)"
+		}
+	},
+	{
+		"monster": "Lucent Nargacuga",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "The Invisible Predator",
+			"guaranteed": "Cutting Through Darkness (Mini) (MR) (Event); Rare Species Snapshot (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Mizutsune",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "A Bewitching Dance",
+			"masterRank": "A Mizutsune's Appeal",
+			"guaranteed": "Dance of the Cherry Blossoms (Both) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Violet Mizutsune",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "A Mysterious Pale Flame",
+			"guaranteed": "Hazard: Dance of Disaster (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Goss Harag",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "It's Gonna Get You!",
+			"masterRank": "Oh, My Garsh Harag",
+			"guaranteed": "Advanced: Carnival Carnage (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Garangolm",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Operation Double Garangolm (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Shogun Ceanataur",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "My Ceanataur Genty Weeps",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Rathalos",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Red Skies at Night",
+			"masterRank": "King of the Crumbling Castle",
+			"guaranteed": "Forbidden Waltz (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Silver Rathalos",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Explore the Unexplored",
+			"guaranteed": "Rare Species Snapshot (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Almudron",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "A Muddy Invitation",
+			"masterRank": "Trial of the Almudron",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Magma Almudron",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Hot Mud in Your Eye",
+			"guaranteed": "Hell's Jingle Bells (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Zinogre",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Skies Flash, Clouds Boom",
+			"masterRank": null,
+			"guaranteed": "Twin Sparks in the Dark (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Lunagaron",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Howling Moon",
+			"guaranteed": "Freezing Fangs (Both) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Astalos",
+		"miniCrown": true,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "In Search of the Doctor",
+			"guaranteed": "Flash of Inspiration (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Espinas",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "A Slumbering Jungle Espinas",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Flaming Espinas",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "What Sleeps in the Tower",
+			"guaranteed": "Hazard: Legendary Strike (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Gore Magala",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Dark Wings, Dark Work",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Chaotic Gore Magala",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Falling Into Chaos",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Seregios",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "A Thousand Scales of Dread",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Tigrex",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "A Resounding Roar",
+			"masterRank": null,
+			"guaranteed": "Seismic Scares (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Diablos",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Subterranean Disturbances",
+			"masterRank": null,
+			"guaranteed": "Monju Mashup! (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Rakna-Kadaki",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Can't Kill It with Fire",
+			"masterRank": "A Sandy Spider Nest",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Pyre Rakna-Kadaki",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "A Mighty Need",
+			"guaranteed": "Noisy Neighbors (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Kushala Daora",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "The Steely Storm",
+			"masterRank": "Storm of the Kushala Daora",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Risen Kushala Daora",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Risen Kushala Daora",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Chameleos",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Ancient Illustration",
+			"masterRank": "Leave No Trace Behind",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Risen Chameleos",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Risen Chameleos",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Teostra",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Advanced: Of Storm and Fire",
+			"masterRank": "Burn Brighter Than the Sun",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Risen Teostra",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Risen Teostra",
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Malzeno",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Crimson Moonlight",
+			"guaranteed": "Flagship Fight (Mini) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Primordial Malzeno",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Daily Practice (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Shagaru Magala",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": null,
+			"masterRank": "Dark Citadel, White Wheel",
+			"guaranteed": "Brightly Shining Disaster (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Risen Shagaru Magala",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Velkhana",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Hazard: Winter Warning (Large) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Rajang",
+		"miniCrown": true,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "A Muddy Invitation",
+			"masterRank": null,
+			"guaranteed": "The Ultimate Fight? (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Furious Rajang",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Dual Threat: Revelry of Destruction (Both) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Bazelgeuse",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "Return of the Bazelgeuse",
+			"masterRank": null,
+			"guaranteed": "Bested by Bazelgeuse (Both) (MR)"
+		}
+	},
+	{
+		"monster": "Seething Bazelgeuse",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Dual Threat: Go Out with a Bang! (Both) (MR) (Event)"
+		}
+	},
+	{
+		"monster": "Wind Serpent Ibushi",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Thunder Serpent Narwa",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Narwa the Allmother",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Crimson Glow Valstrax",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "The Evil Star from Beyond",
+			"masterRank": "Mysterious Glow",
+			"guaranteed": "Advanced: Crimson Calamity (Large) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Risen Crimson Glow Valstrax",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Gaismagorm",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Amatsu",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": null
+		}
+	},
+	{
+		"monster": "Apex Arzuros",
+		"miniCrown": false,
+		"largeCrown": true,
+		"quests": {
+			"highRank": "The Avaricious Apex Arzuros",
+			"masterRank": null,
+			"guaranteed": "Apex Arzuros Emergency (Large) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Apex Rathian",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "The Graceful Apex Rathian",
+			"masterRank": null,
+			"guaranteed": "Apex Rathian Emergency (Large) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Apex Mizutsune",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Advanced: Those Crowned Apex",
+			"masterRank": null,
+			"guaranteed": "Heart of Rivalry (Large) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Apex Rathalos",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Advanced: Those Crowned Apex",
+			"masterRank": null,
+			"guaranteed": "Apex Rathalos Emergency (Large) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Apex Diablos",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": null,
+			"masterRank": null,
+			"guaranteed": "Diablos Deception (Both) (HR) (Event)"
+		}
+	},
+	{
+		"monster": "Apex Zinogre",
+		"miniCrown": false,
+		"largeCrown": false,
+		"quests": {
+			"highRank": "Advanced: Those Crowned Apex",
+			"masterRank": null,
+			"guaranteed": "Heart of Rivalry (Large) (HR) (Event)"
+		}
+	}
+]

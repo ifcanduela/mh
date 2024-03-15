@@ -22,6 +22,6 @@
 	const items = computed(() => {
 		const weaknesses = getSortedWeaknesses(props.weaknesses)
 
-		return weaknesses /* .filter((w) => w.value >= max - 15) */
+		return weaknesses
 	})
 </script>

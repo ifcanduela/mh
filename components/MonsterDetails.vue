@@ -14,10 +14,28 @@
 			<CampaignBadge expand :campaign="monster.campaign" />
 		</h2>
 
-		<div class="flex justify-start items-center gap-3">
+		<div class="flex justify-start items-center gap-3 mb-4">
 			<ElementalWeaknesses
 				:weaknesses="monster.elementalWeaknesses.total"
 			/>
+		</div>
+
+		<div class="mb-4">
+			<div class="flex gap-1">
+				<span
+					class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
+					:class="[crowns.miniCrown ? 'opacity-90' : 'opacity-20']"
+					>mini</span
+				>
+				<span
+					class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
+					:class="[crowns.largeCrown ? 'opacity-90' : 'opacity-20']"
+					>giant</span
+				>
+			</div>
+			<div v-for="(q, t) in crowns.quests" v-show="q" class="text-sm">
+				<span class="opacity-50">{{ t }}</span> {{ q }}
+			</div>
 		</div>
 
 		<div class="flex flex-col gap-4 justify-center">
@@ -91,6 +109,7 @@
 
 <script setup lang="ts">
 	import { Monster } from "~/utils/types"
+	import crownData from "~/data/crowns.json" with { type: "json" }
 
 	const props = defineProps<{
 		monster: Monster
@@ -111,6 +130,13 @@
 	function handleCloseClick() {
 		emit("close")
 	}
+
+	const crowns = computed(() => {
+		const n = props.monster.name
+		const c = crownData.find((c) => c.monster === n)
+
+		return c
+	})
 
 	const filteredMaterials = computed(() => {
 		let result = props.monster.materials.slice()
