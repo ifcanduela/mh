@@ -5,6 +5,12 @@ export default defineNuxtConfig({
 	app: {
 		baseURL: "/mh/",
 	},
+	runtimeConfig: {
+		public: {
+			supabaseUrl: process.env.SUPABASE_URL,
+			supabaseKey: process.env.SUPABASE_KEY,
+		},
+	},
 	$development: {
 		app: {
 			baseURL: "",
@@ -13,20 +19,12 @@ export default defineNuxtConfig({
 	devServer: {
 		port: 3020,
 	},
-	modules: [
-		"@nuxtjs/google-fonts",
-		"@nuxtjs/tailwindcss",
-		"@vueuse/nuxt",
-		"@nuxtjs/supabase",
-	],
+	modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@vueuse/nuxt"],
 	googleFonts: {
 		display: "swap",
 		download: true,
 		families: {
 			Inter: [400, 700],
 		},
-	},
-	supabase: {
-		redirect: false,
 	},
 })

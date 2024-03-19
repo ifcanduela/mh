@@ -30,7 +30,7 @@
 		],
 	})
 
-	const supabase = useSupabaseClient()
+	const supabase = useSupabase()
 
 	// Fetch checks from the Supabasse database
 	const { data: checks, refresh } = await useAsyncData(
