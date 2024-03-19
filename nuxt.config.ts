@@ -3,7 +3,12 @@ export default defineNuxtConfig({
 	// ssr: false,
 	devtools: { enabled: false },
 	app: {
-		baseURL: process.env.NUXT_APP_BASE_URL,
+		baseURL: "/mh",
+	},
+	$development: {
+		app: {
+			baseURL: "",
+		},
 	},
 	nitro: {
 		prerender: {
