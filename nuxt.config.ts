@@ -3,12 +3,7 @@ export default defineNuxtConfig({
 	ssr: false,
 	devtools: { enabled: false },
 	app: {
-		baseURL: "/mh/",
-	},
-	$development: {
-		app: {
-			baseURL: "/",
-		},
+		baseURL: process.env.NUXT_APP_BASE_URL,
 	},
 	devServer: {
 		port: 3020,
@@ -28,7 +23,7 @@ export default defineNuxtConfig({
 	},
 	supabase: {
 		redirect: false,
-		url: "",
-		key: "",
+		key: process.env.SUPABASE_KEY,
+		url: process.env.SUPABASE_URL,
 	},
 })

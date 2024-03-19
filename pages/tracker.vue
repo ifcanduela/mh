@@ -19,7 +19,7 @@
 	import { type Check } from "~/utils/types"
 
 	useHead({
-		title: "Checlist",
+		title: "Checklist",
 		meta: [
 			{
 				hid: "description",
