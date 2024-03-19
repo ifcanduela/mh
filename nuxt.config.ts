@@ -28,5 +28,7 @@ export default defineNuxtConfig({
 	},
 	supabase: {
 		redirect: false,
+		url: "",
+		key: "",
 	},
 })
