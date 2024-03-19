@@ -13,12 +13,20 @@ export default defineNuxtConfig({
 	devServer: {
 		port: 3020,
 	},
-	modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@vueuse/nuxt"],
+	modules: [
+		"@nuxtjs/google-fonts",
+		"@nuxtjs/tailwindcss",
+		"@vueuse/nuxt",
+		"@nuxtjs/supabase",
+	],
 	googleFonts: {
 		display: "swap",
 		download: true,
 		families: {
 			Inter: [400, 700],
 		},
+	},
+	supabase: {
+		redirect: false,
 	},
 })

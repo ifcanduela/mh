@@ -1,14 +1,13 @@
-export type Product = {
+export type Check = {
+	checked: boolean
+	collection: string | null
+	created_at: string
+	description: string | null
 	id: number
+	metadata: any | null
 	title: string
-	price: number
-	description: string
-	category: string
-	image: string
-	rating: {
-		rate: number
-		count: number
-	}
+	updated_at: string | null
+	uuid: string
 }
 
 export class ElementalWeakness {

@@ -12,7 +12,7 @@
 		element: string
 	}>()
 	const classes = {
-		fire: "bg-orange-100",
+		fire: "bg-red-100",
 		water: "bg-sky-100",
 		ice: "bg-emerald-100",
 		thunder: "bg-yellow-100",

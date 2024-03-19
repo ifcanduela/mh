@@ -9,32 +9,48 @@
 			&times; close
 		</button>
 
-		<h2 class="flex items-center gap-4 mb-4">
-			<span class="font-bold text-xl">{{ monster.name }}</span>
-			<CampaignBadge expand :campaign="monster.campaign" />
-		</h2>
-
-		<div class="flex justify-start items-center gap-3 mb-4">
-			<ElementalWeaknesses
-				:weaknesses="monster.elementalWeaknesses.total"
+		<div class="flex gap-4">
+			<img
+				class="w-24 h-24 mx-auto"
+				:src="`images/monsters/${slug}.png`"
 			/>
-		</div>
+			<div class="grow">
+				<h2 class="flex items-center gap-4 mb-4">
+					<span class="font-bold text-xl">{{ monster.name }}</span>
+					<CampaignBadge expand :campaign="monster.campaign" />
+				</h2>
 
-		<div class="mb-4">
-			<div class="flex gap-1">
-				<span
-					class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
-					:class="[crowns.miniCrown ? 'opacity-90' : 'opacity-20']"
-					>mini</span
-				>
-				<span
-					class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
-					:class="[crowns.largeCrown ? 'opacity-90' : 'opacity-20']"
-					>giant</span
-				>
-			</div>
-			<div v-for="(q, t) in crowns.quests" v-show="q" class="text-sm">
-				<span class="opacity-50">{{ t }}</span> {{ q }}
+				<div class="flex justify-start items-center gap-3 mb-4">
+					<ElementalWeaknesses
+						:weaknesses="monster.elementalWeaknesses.total"
+					/>
+				</div>
+
+				<div class="mb-4">
+					<div class="flex gap-1">
+						<span
+							class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
+							:class="[
+								crowns.miniCrown ? 'opacity-90' : 'opacity-20',
+							]"
+							>mini</span
+						>
+						<span
+							class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
+							:class="[
+								crowns.largeCrown ? 'opacity-90' : 'opacity-20',
+							]"
+							>giant</span
+						>
+					</div>
+					<div
+						v-for="(q, t) in crowns.quests"
+						v-show="q"
+						class="text-sm"
+					>
+						<span class="opacity-50">{{ t }}</span> {{ q }}
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -116,6 +132,8 @@
 	}>()
 
 	const emit = defineEmits(["close"])
+
+	const slug = props.monster.name.toLowerCase().replaceAll(" ", "-")
 
 	const methods = [
 		{ key: "questReward", label: "Hunt" },
