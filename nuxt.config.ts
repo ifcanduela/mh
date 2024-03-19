@@ -1,9 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	ssr: false,
+	// ssr: false,
 	devtools: { enabled: false },
 	app: {
 		baseURL: process.env.NUXT_APP_BASE_URL,
+	},
+	nitro: {
+		prerender: {
+			routes: ["/", "/tracker"],
+			ignore: ["/games"],
+		},
 	},
 	devServer: {
 		port: 3020,
