@@ -7,7 +7,6 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		prerender: {
-			routes: ["/", "/tracker"],
 			ignore: ["/games"],
 		},
 	},
