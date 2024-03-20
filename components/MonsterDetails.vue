@@ -142,8 +142,6 @@
 	const miniCrown = ref<boolean>(false)
 	const giantCrown = ref<boolean>(false)
 
-	alert(`${monsterSlug}`)
-
 	const response = await supabase
 		.from("checks")
 		.select()

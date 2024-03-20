@@ -58,7 +58,7 @@
 		],
 	})
 
-	const filter = useState("monsters.filter", () => "bagg")
+	const filter = useState("monsters.filter", () => "")
 
 	const filteredMonsters = computed(() => {
 		let result = monsterData.slice()
