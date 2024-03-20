@@ -28,20 +28,20 @@
 
 				<div class="mb-4">
 					<div class="flex gap-1">
-						<span
+						<button
+							@click="updateCrown('mini')"
 							class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
-							:class="[
-								crowns.miniCrown ? 'opacity-90' : 'opacity-20',
-							]"
-							>mini</span
+							:class="[miniCrown ? 'opacity-90' : 'opacity-20']"
 						>
-						<span
+							mini
+						</button>
+						<button
+							@click="updateCrown('giant')"
 							class="px-2 py-1 bg-yellow-200 text-yellow-700 uppercase"
-							:class="[
-								crowns.largeCrown ? 'opacity-90' : 'opacity-20',
-							]"
-							>giant</span
+							:class="[giantCrown ? 'opacity-90' : 'opacity-20']"
 						>
+							giant
+						</button>
 					</div>
 					<div
 						v-for="(q, t) in crowns.quests"
@@ -132,6 +132,51 @@
 	}>()
 
 	const emit = defineEmits(["close"])
+
+	const crownsResponse = ref<any[]>([])
+
+	const supabase = useSupabase()
+
+	const monsterSlug = props.monster.name.replaceAll(" ", "")
+
+	const miniCrown = ref<boolean>(false)
+	const giantCrown = ref<boolean>(false)
+
+	alert(`${monsterSlug}`)
+
+	const response = await supabase
+		.from("checks")
+		.select()
+		.like("code", `crowns.${monsterSlug}%`)
+
+	if (response.data) {
+		miniCrown.value = response.data.find((c) =>
+			c.code.endsWith(".mini"),
+		).checked
+		giantCrown.value = response.data.find((c) =>
+			c.code.endsWith(".giant"),
+		).checked
+	} else {
+		crownsResponse.value = []
+	}
+
+	function updateCrown(size: "mini" | "giant") {
+		const currentValue =
+			size === "mini" ? miniCrown.value : giantCrown.value
+		const code = `crowns.${monsterSlug}.${size}`
+
+		supabase
+			.from("checks")
+			.update({ checked: !currentValue })
+			.eq("code", code)
+			.then(() => {
+				if (size === "mini") {
+					miniCrown.value = !currentValue
+				} else {
+					giantCrown.value = !currentValue
+				}
+			})
+	}
 
 	const slug = props.monster.name.toLowerCase().replaceAll(" ", "-")
 

@@ -7,8 +7,6 @@
 			<template #subtitle>Hunting Companion</template>
 		</PageTitle>
 
-		<pre><code>{{ runtimeConfig }}</code></pre>
-
 		<menu class="flex gap-4 relative">
 			<input
 				type="text"
@@ -47,8 +45,6 @@
 	import { Monster } from "~/utils/types"
 	import monsterData from "~/data/monster-data.json" with { type: "json" }
 
-	const runtimeConfig = useRuntimeConfig()
-
 	const selectedMonster = ref<Monster | null>(null)
 
 	useHead({
@@ -62,7 +58,7 @@
 		],
 	})
 
-	const filter = useState("monsters.filter", () => "")
+	const filter = useState("monsters.filter", () => "bagg")
 
 	const filteredMonsters = computed(() => {
 		let result = monsterData.slice()
