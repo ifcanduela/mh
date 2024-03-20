@@ -5,12 +5,15 @@ on:
     push:
         branches:
             - master
+env:
+    SUPABASE_URL: ${{vars.SUPABASE_URL}}
+    SUPABASE_KEY: ${{vars.SUPABASE_KEY}}
 jobs:
     build:
         runs-on: ubuntu-latest
         env:
-            SUPABASE_URL: ${{ vars.SUPABASE_URL }}
-            SUPABASE_KEY: ${{ vars.SUPABASE_KEY }}
+            SUPABASE_URL: ${{vars.SUPABASE_URL}}
+            SUPABASE_KEY: ${{vars.SUPABASE_KEY}}
         steps:
             - uses: actions/checkout@v4
             - run: corepack enable
