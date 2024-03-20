@@ -7,7 +7,7 @@ on:
             - master
 env:
     SUPABASE_URL: "env.fakeSupabaseUrl"
-    SUPABASE_KEY: ${{var.SUPABASE_KEY}}
+    SUPABASE_KEY: ${{ var.SUPABASE_KEY }}
 jobs:
     build:
         runs-on: ubuntu-latest
