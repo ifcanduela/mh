@@ -11,6 +11,8 @@ env:
 jobs:
     build:
         runs-on: ubuntu-latest
+        environment:
+            name: github_pages
         steps:
             - uses: actions/checkout@v4
             - run: corepack enable
