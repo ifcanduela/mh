@@ -11,9 +11,6 @@ env:
 jobs:
     build:
         runs-on: ubuntu-latest
-        env:
-            SUPABASE_URL: "build.fakeSupabaseUrl"
-            SUPABASE_KEY: "build.fakeSupabaseKey"
         steps:
             - uses: actions/checkout@v4
             - run: corepack enable
