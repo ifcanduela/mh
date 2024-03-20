@@ -23,7 +23,7 @@ jobs:
                   echo ${{ vars.SUPABASE_KEY }}
                   echo $SUPABASE_URL
                   echo $SUPABASE_KEY
-            - run: npx nuxt build --preset github_pages
+            - run: SUPABASE_URL=${{ vars.SUPABASE_URL }} SUPABASE_KEY=${{ vars.SUPABASE_KEY }} npx nuxt build --preset github_pages
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
