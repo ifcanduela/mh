@@ -7,6 +7,8 @@
 			<template #subtitle>Hunting Companion</template>
 		</PageTitle>
 
+		<pre><code>{{ runtimeConfig }}</code></pre>
+
 		<menu class="flex gap-4 relative">
 			<input
 				type="text"
@@ -44,6 +46,8 @@
 <script setup lang="ts">
 	import { Monster } from "~/utils/types"
 	import monsterData from "~/data/monster-data.json" with { type: "json" }
+
+	const runtimeConfig = useRuntimeConfig()
 
 	const selectedMonster = ref<Monster | null>(null)
 
