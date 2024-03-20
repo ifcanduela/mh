@@ -5,12 +5,9 @@ on:
     push:
         branches:
             - master
-env:
-    SUPABASE_URL: "env.fakeSupabaseUrl"
-    SUPABASE_KEY: ${{ vars.SUPABASE_KEY }}
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-latestenv:
         steps:
             - uses: actions/checkout@v4
             - run: corepack enable
@@ -22,6 +19,8 @@ jobs:
             - run: |
                   echo ${{ vars.SUPABASE_URL }}
                   echo ${{ vars.SUPABASE_KEY }}
+                  echo $SUPABASE_URL
+                  echo $SUPABASE_KEY
             - run: npx nuxt build --preset github_pages
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
