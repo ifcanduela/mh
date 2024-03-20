@@ -19,7 +19,7 @@ jobs:
                   node-version: "20"
             # Pick your own package manager and build script
             - run: npm install
-            - run: SUPABASE_URL=$SUPABASE_URL SUPABASE_KEY=$SUPABASE_KEY npx nuxt build --preset github_pages
+            - run: SUPABASE_URL=alksdjalksjdl SUPABASE_KEY=aksjhdaksjhd npx nuxt build --preset github_pages
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
