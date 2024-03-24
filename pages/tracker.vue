@@ -7,7 +7,7 @@
 			<template #subtitle>Collectible Tracker</template>
 		</PageTitle>
 
-		<div>
+		<div class="flex flex-col gap-3">
 			<div v-for="c in checks">
 				<CheckItem :check="c" @update="updateCheck(c, $event)" />
 			</div>
@@ -40,7 +40,7 @@
 				.from("checks")
 				.select("*")
 				.eq("collection", "mhrise.SturdyPadlock")
-				.order("title")
+				.order("id")
 
 			return data as Check[]
 		},

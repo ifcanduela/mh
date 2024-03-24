@@ -45,6 +45,11 @@ export class Monster {
 
 	public campaign: string = ""
 
+	public crowns: { mini: boolean; giant: boolean } = {
+		mini: false,
+		giant: false,
+	}
+
 	public elementalWeaknesses: {
 		total: ElementalWeakness
 		parts: ElementalWeakness[]

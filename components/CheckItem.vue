@@ -1,13 +1,18 @@
 <template>
-	<label class="flex gap-2">
+	<label class="flex p-2 gap-2 bg-white rounded">
 		<div>
-			<input type="checkbox" :value="check.uuid" :checked="check.checked" @change="handleChangeEvent" />
+			<input
+				type="checkbox"
+				:value="check.uuid"
+				:checked="check.checked"
+				@change="handleChangeEvent"
+			/>
 		</div>
 
 		<div class="flex flex-col gap-1">
 			<div>{{ check.title }}</div>
-			<code>{{ check.checked }}</code>
-			<div>
+
+			<div v-show="check.description">
 				{{ check.description }}
 			</div>
 		</div>

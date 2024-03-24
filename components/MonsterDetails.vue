@@ -127,20 +127,18 @@
 	import { Monster } from "~/utils/types"
 	import crownData from "~/data/crowns.json" with { type: "json" }
 
+	const supabase = useSupabase()
+
 	const props = defineProps<{
 		monster: Monster
 	}>()
 
 	const emit = defineEmits(["close"])
 
-	const crownsResponse = ref<any[]>([])
-
-	const supabase = useSupabase()
-
-	const monsterSlug = props.monster.name.replaceAll(" ", "")
-
 	const miniCrown = ref<boolean>(false)
 	const giantCrown = ref<boolean>(false)
+
+	const monsterSlug = props.monster.name.replaceAll(" ", "")
 
 	const response = await supabase
 		.from("checks")
@@ -154,8 +152,6 @@
 		giantCrown.value = response.data.find((c) =>
 			c.code.endsWith(".giant"),
 		).checked
-	} else {
-		crownsResponse.value = []
 	}
 
 	function updateCrown(size: "mini" | "giant") {

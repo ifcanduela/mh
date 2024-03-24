@@ -7,20 +7,25 @@
 			<template #subtitle>Hunting Companion</template>
 		</PageTitle>
 
-		<menu class="flex gap-4 relative">
-			<input
-				type="text"
-				placeholder="Filter by name or material"
-				v-model="filter"
-				class="grow border border-gray-200 rounded p-2 w-full"
-			/>
-			<button
-				v-show="filter.length"
-				@click="filter = ''"
-				class="absolute right-0 h-full bg-orange-200 rounded aspect-square text-xs"
-			>
-				&times;
-			</button>
+		<menu class="flex gap-4">
+			<div class="grow relative">
+				<input
+					type="text"
+					placeholder="Filter by name or material"
+					v-model="filter"
+					class="grow border border-gray-200 rounded p-2 w-full"
+				/>
+				<button
+					v-show="filter.length"
+					@click="filter = ''"
+					class="absolute right-0 h-full bg-orange-200 rounded aspect-square text-xs"
+				>
+					&times;
+				</button>
+			</div>
+			<div>
+				<RadioToggle v-model="gameFilter" :options="gameOptions" />
+			</div>
 		</menu>
 
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -45,8 +50,6 @@
 	import { Monster } from "~/utils/types"
 	import monsterData from "~/data/monster-data.json" with { type: "json" }
 
-	const selectedMonster = ref<Monster | null>(null)
-
 	useHead({
 		title: "Monsters",
 		meta: [
@@ -58,10 +61,46 @@
 		],
 	})
 
+	const supabase = useSupabase()
+
+	const response = await supabase
+		.from("checks")
+		.select()
+		.like("code", `crowns.%`)
+		.order("code")
+
+	response.data.forEach((row) => {
+		const code = row.code.split(".")
+		const monsterSlug = code[1]
+		const size = code[2]
+		const monsterIndex = monsterData.findIndex(
+			(m) => m.name.replaceAll(" ", "") === monsterSlug,
+		)
+		const monster = monsterData[monsterIndex]
+
+		if (!monster.crowns) {
+			monster.crowns = { mini: false, giant: false }
+		}
+
+		monster.crowns[size] = row.checked
+	}, {})
+
+	const selectedMonster = ref<Monster | null>(null)
+	const gameFilter = useState("gameFilter", () => "")
+	const gameOptions = [
+		{ label: "All", value: "" },
+		{ label: "Rise", value: "rise" },
+		{ label: "Sunbreak", value: "sunbreak" },
+	]
+
 	const filter = useState("monsters.filter", () => "")
 
 	const filteredMonsters = computed(() => {
 		let result = monsterData.slice()
+
+		if (gameFilter.value) {
+			result = result.filter((m) => m.campaign === gameFilter.value)
+		}
 
 		if (filter.value.length) {
 			const rx = new RegExp(filter.value, "i")

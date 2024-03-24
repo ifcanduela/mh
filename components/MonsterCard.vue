@@ -8,6 +8,7 @@
 			<MainElementalWeakness
 				:weaknesses="monster.elementalWeaknesses.total"
 			/>
+			<MonsterCrowns :crowns="monster.crowns" @update="updateCrown" />
 		</div>
 	</div>
 </template>
@@ -18,4 +19,6 @@
 	const props = defineProps<{
 		monster: Monster
 	}>()
+
+	async function updateCrown(type: "mini" | "giant") {}
 </script>
